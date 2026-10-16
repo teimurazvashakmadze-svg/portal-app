@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портал</title>
+<meta name="apple-mobile-web-app-title" content="Портал">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#21675c">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{color-scheme:light}
+body{margin:0;background:#fff;color:#1f2a28;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:420px;margin:0 auto;padding:40px 16px;text-align:center}
+img{width:96px;height:96px;border-radius:22px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+h1{font-size:1.4rem;margin:18px 0 6px}
+a.btn{display:inline-block;margin:18px 0;padding:12px 22px;border-radius:10px;background:#21675c;color:#fff;text-decoration:none;font-weight:600}
+ol{text-align:left;padding-left:22px;color:#4a5856}
+</style>
+</head>
+<body>
+<main>
+<img src="apple-touch-icon.png" alt="">
+<h1>Корпоративный портал</h1>
+<a class="btn" id="open" href="#">Открыть портал</a>
+<p><b>Как добавить иконку на экран телефона</b></p>
+<ol>
+<li>iPhone: откройте эту страницу в Safari, нажмите «Поделиться» → «На экран Домой» → «Добавить».</li>
+<li>Android: в Chrome нажмите ⋮ → «Добавить на главный экран».</li>
+</ol>
+</main>
+<script>
+// Адрес опубликованного портала (/exec)
+var PORTAL='https://script.google.com/macros/s/AKfycbynlAIX47_r8O6NlSHA0n67QRm8ezNC5IK3feReqc828MftPZDMwG5q4DVxOu0O0eNJ/exec';
+document.getElementById('open').href=PORTAL;
+var standalone=window.navigator.standalone===true||(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||/[?&]app=1/.test(location.search);
+if(standalone)location.replace(PORTAL);
+</script>
+</body>
+</html>
